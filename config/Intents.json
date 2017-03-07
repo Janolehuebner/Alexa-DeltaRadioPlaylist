@@ -1,0 +1,10 @@
+{
+  "intents": [
+    {
+      "intent": "PlaylistIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

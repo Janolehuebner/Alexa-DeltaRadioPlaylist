@@ -1,0 +1,24 @@
+short:
+
+Nennt den aktuellen (24h gewichteten) Bitcoinpreis
+
+
+Long:
+
+Dieser Skill ruft den (24h gewichteten) Bitcoinpreis von Blockchain.info ab.
+
+Bei diesem Skill handelt es sich um ein inoffizielles Fan Projekt.
+
+
+Phrases:
+
+
+Alexa, Starte Bitcoin Fan.
+
+Alexa, Frage Bitcoin Fan nach dem Bitcoinpreis.
+
+Alexa, Frage Bitcoin Fan wie der aktuelle Bitcoinpreis ist.
+
+Keywords:
+
+Bitcoin,Blockchain,Preis

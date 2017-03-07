@@ -1,0 +1,17 @@
+PlaylistIntent		was gerade läuft.
+PlaylistIntent		was läuft gerade
+PlaylistIntent		was läuft.
+PlaylistIntent     	welcher song das ist.
+PlaylistIntent     	welcher song ist das
+PlaylistIntent     	nach dem song.
+PlaylistIntent     	welcher song.
+PlaylistIntent     	welcher song das ist
+PlaylistIntent     	song
+PlaylistIntent     	wie der song heisst.
+PlaylistIntent     	wie das Lied heisst.
+PlaylistIntent     	welches lied gerade läuft
+PlaylistIntent     	lied
+PlaylistIntent     	welches lied das ist
+PlaylistIntent     	nach dem lied.
+AMAZON.HelpIntent	nach Hilfe.
+AMAZON.HelpIntent	Hilfe
