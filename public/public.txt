@@ -1,24 +1,26 @@
 short:
 
-Nennt den aktuellen (24h gewichteten) Bitcoinpreis
+Alexa sagt dir mit diesem Skill was gerade auf Deltaradio läuft.
 
 
 Long:
 
-Dieser Skill ruft den (24h gewichteten) Bitcoinpreis von Blockchain.info ab.
+Hörst du mit deinem Echo über z.B. TuneIn Deltaradio? Möchtest du auch manchmal wissen was für ein Song gerade läuft, aber wenn du fragst, bekommst du nur die Antwort: "Gerade läuft Deltaradio."?
+Dann kann dir dieser Skill helfen! Frage einfach "Alexa, frage Deltaradio Playlist was gerade läuft." und Alexa nennt dir Name und Interpreten des aktuellen Songs.
 
-Bei diesem Skill handelt es sich um ein inoffizielles Fan Projekt.
+Der Skill greift hierzu auf die Playlist der Deltaradio Website zu.
 
+Der Skill ist ein inoffizielles Projekt und wird in keinster Weise von Deltaradio gesponsort!
 
 Phrases:
 
 
-Alexa, Starte Bitcoin Fan.
+Alexa, frage Deltaradio Playlist was gerade läuft.
 
-Alexa, Frage Bitcoin Fan nach dem Bitcoinpreis.
+Alexa, frage Deltaradio Playlist welches Lied gerade läuft.
 
-Alexa, Frage Bitcoin Fan wie der aktuelle Bitcoinpreis ist.
+Alexa, frage Deltaradio Playlist welcher Song das ist.
 
 Keywords:
 
-Bitcoin,Blockchain,Preis
+-
