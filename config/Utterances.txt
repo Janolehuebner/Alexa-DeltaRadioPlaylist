@@ -5,7 +5,6 @@ PlaylistIntent     	welcher song das ist.
 PlaylistIntent     	welcher song ist das
 PlaylistIntent     	nach dem song.
 PlaylistIntent     	welcher song.
-PlaylistIntent     	welcher song das ist
 PlaylistIntent     	song
 PlaylistIntent     	wie der song heisst.
 PlaylistIntent     	wie das Lied heisst.

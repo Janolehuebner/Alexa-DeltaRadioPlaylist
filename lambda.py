@@ -5,17 +5,19 @@ from __future__ import print_function
 import requests
 import datetime
 
+
 def songdata():
     now = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
     now_minus_10 = now - datetime.timedelta(minutes=10)
-    now_formatted= now.strftime('%Y-%m-%dT%H:%M:%S')
+    now_formatted = now.strftime('%Y-%m-%dT%H:%M:%S')
     now_minus_10_formated = now_minus_10.strftime('%Y-%m-%dT%H:%M:%S')
 
-    request = requests.get('http://www.deltaradio.de/iris-search-live.json', params={"start": now_minus_10_formated, "end": now_formatted})
-    data= request.json()
+    request = requests.get('http://www.deltaradio.de/iris-search-live.json',
+                           params={"start": now_minus_10_formated, "end": now_formatted})
+    data = request.json()
     song = data['result']['entry'][0]['song']['entry'][0]['title']
     artist = data['result']['entry'][0]['song']['entry'][0]['artist']['entry'][0]['name']
-    return song+" von "+artist
+    return song + " von " + artist
 
 
 # --------------- Helpers that build all of the responses ----------------------
@@ -29,10 +31,11 @@ def build_speechlet_response(title, output):
         'card': {
             'type': 'Simple',
             'title': "Deltaradio Playlist (inoffiziell)",
-            'content':  output
+            'content': output
         },
         'shouldEndSession': True
     }
+
 
 def build_response(session_attributes, speechlet_response):
     return {
@@ -41,19 +44,19 @@ def build_response(session_attributes, speechlet_response):
         'response': speechlet_response
     }
 
+
 # --------------- Functions that control the skill's behavior ------------------
 
 def get_response():
-
     session_attributes = {}
     card_title = "Deltaradio Playlist (inoffiziell) - Gerade läuft"
-    speech_output = "Gerade läuft "+songdata()
+    speech_output = "Gerade läuft " + songdata()
 
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output))
 
-def get_help_response():
 
+def get_help_response():
     session_attributes = {}
     card_title = "Deltaradio Playlist (inoffiziell) - Hilfe"
     speech_output = "Ich kann dir sagen, was gerade bei Deltaradio läuft."
@@ -61,13 +64,14 @@ def get_help_response():
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output))
 
+
 # --------------- Events ------------------
 
 def on_launch(launch_request, session):
     return get_response()
 
-def on_intent(intent_request, session):
 
+def on_intent(intent_request, session):
     intent_name = intent_request['intent']['name']
 
     if intent_name == "PlaylistIntent":
@@ -75,6 +79,7 @@ def on_intent(intent_request, session):
     elif intent_name == "AMAZON.HelpIntent":
         return get_help_response()
     raise ValueError("Invalid intent")
+
 
 # --------------- Main handler ------------------
 
