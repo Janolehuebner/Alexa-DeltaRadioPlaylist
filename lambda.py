@@ -3,21 +3,18 @@
 from __future__ import print_function
 
 import requests
-import datetime
 
 
 def songdata():
-    now = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-    now_minus_10 = now - datetime.timedelta(minutes=10)
-    now_formatted = now.strftime('%Y-%m-%dT%H:%M:%S')
-    now_minus_10_formated = now_minus_10.strftime('%Y-%m-%dT%H:%M:%S')
 
-    request = requests.get('http://www.deltaradio.de/iris-search-live.json',
-                           params={"start": now_minus_10_formated, "end": now_formatted})
-    data = request.json()
-    song = data['result']['entry'][0]['song']['entry'][0]['title']
-    artist = data['result']['entry'][0]['song']['entry'][0]['artist']['entry'][0]['name']
-    return song + " von " + artist
+    request = requests.get('http://iris-delta.loverad.io/flow.json?station=3&count=2', params={"station": "3", "count": "2"})
+    data= request.json()
+    song = data['result']['entry'][1]['song']['entry'][0]['title']
+    artist = data['result']['entry'][1]['song']['entry'][0]['artist']['entry'][0]['name']
+    songnext = data['result']['entry'][0]['song']['entry'][0]['title']
+    artistnext = data['result']['entry'][0]['song']['entry'][0]['artist']['entry'][0]['name']
+    return song+" von "+artist + ". Als naechstes laeuft "+songnext+" von "+artistnext
+
 
 
 # --------------- Helpers that build all of the responses ----------------------
